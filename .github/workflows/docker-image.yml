@@ -1,5 +1,5 @@
 name: ci
-
+run-name: ${{join(github.ref || github.action, ',')}}
 on:
   push:
     branches:
