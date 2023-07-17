@@ -1,0 +1,15 @@
+name: Print Node Version Workflow
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  print-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setuo-node@v3
+        with:
+          node-version: "18"
+      - run: node --version
