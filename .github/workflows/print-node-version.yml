@@ -1,5 +1,7 @@
 name: Print Node Version Workflow
 
+run-name: ${{ github.triggering_actor }} ran ${{ github.job }} on ${{ github.event_name }}
+
 on:
   push:
     branches: [master]
